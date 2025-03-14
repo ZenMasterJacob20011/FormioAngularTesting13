@@ -1,1 +1,21 @@
-<formio (ready)="onReady($event)" src="http://localhost:3000/nuklajvfjnpwgcx/test"></formio>
+<formio (ready)="onReady($event)" [form]="{
+  components: [
+  {
+  'label': 'Upload',
+  'tableView': false,
+  'storage': 'base64',
+  'webcam': false,
+  'capture': false,
+  'fileTypes': [
+    {
+      'label': '',
+      'value': ''
+    }
+  ],
+  'validateWhenHidden': false,
+  'key': 'file',
+  'type': 'file',
+  'input': true
+  }
+  ]
+}"></formio>
